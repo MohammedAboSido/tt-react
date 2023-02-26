@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    height: 10vh;
+    padding: 15px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+ul li {
+    font-size: 25px;
+}
+ul li a {
+    text-decoration: none;
+}
