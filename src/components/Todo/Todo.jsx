@@ -7,11 +7,15 @@ export default function Todo() {
   const myTodo = todosData.find((item) => item.id === Number(id));
   return (
     <>
-      <div className="todoWrapper">
-        <span className="todoId">Id: {myTodo.id}</span>
-        <span className="todoTitle">Title: {myTodo.title}</span>
-        <span className="todoBody">Description: {myTodo.body}</span>
-      </div>
+      {myTodo ? (
+        <div className="todoWrapper">
+          <span className="todoId">Id: {myTodo?.id}</span>
+          <span className="todoTitle">Title: {myTodo?.title}</span>
+          <span className="todoBody">Description: {myTodo?.body}</span>
+        </div>
+      ) : (
+        <h1 style={{ color: "red" }}>Page Not Found 404</h1>
+      )}
     </>
   );
 }

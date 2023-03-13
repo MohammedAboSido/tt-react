@@ -7,11 +7,15 @@ export default function Post() {
   const myPost = postsData.find((item) => item.id === Number(id));
   return (
     <>
-      <div className="postWrapper">
-        <span className="postId">Id: {myPost.id}</span>
-        <span className="postTitle">Title: {myPost.title}</span>
-        <span className="postBody">Description: {myPost.body}</span>
-      </div>
+      {myPost ? (
+        <div className="postWrapper">
+          <span className="postId">Id: {myPost?.id}</span>
+          <span className="postTitle">Title: {myPost?.title}</span>
+          <span className="postBody">Description: {myPost?.body}</span>
+        </div>
+      ) : (
+        <h1 style={{ color: "red" }}>Page Not Found 404</h1>
+      )}
     </>
   );
 }
