@@ -1,0 +1,9 @@
+.postWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-family: system-ui;
+  font-weight: 500;
+}
